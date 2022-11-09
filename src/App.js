@@ -1,7 +1,8 @@
 import React from "react";
 import { Header } from "./components/Header";
-import { PersonalInfo } from "./components/PersonalInformation";
-import { Education } from "./components/Education";
+import { PersonalInfo } from "./components/Forms/PersonalInformation";
+import { Education } from "./components/Forms/Education";
+import { Experience } from "./components/Forms/Experience";
 
 export function App() {
   return (
@@ -9,7 +10,7 @@ export function App() {
       <Header />
       <PersonalInfo />
       <Education />
-      
+      <Experience />
     </>
   )
 }
