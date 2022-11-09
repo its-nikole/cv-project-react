@@ -14,6 +14,9 @@ export function PersonalInfo() {
                 <label>Phone Number</label>
                 <input type="numnber" name="phoneNumber" placeholder="Phone Number" className="input"/>
 
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Email" className="input"/>
+
                 <label>Description</label>
                 <input type="text" name="description" placeholder="Describe yourself briefly" className="input"/>
             </form>

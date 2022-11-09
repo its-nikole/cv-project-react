@@ -1,3 +1,14 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    min-width: 700px;
+    max-width: 1170px;
+    width: 900px;
+    margin: 0 auto;
+    gap: 70px;
+    justify-content: center;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -7,4 +18,18 @@ form {
 .input {
     margin-bottom: 10px;
     width: 20rem;
+}
+
+.personal-info-prew {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 400px;
+}
+
+.preview-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
