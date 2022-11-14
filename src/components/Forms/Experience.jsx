@@ -19,6 +19,9 @@ export function Experience() {
 
                 <label>To</label>
                 <input type="date" name="dateTo" placeholder="To" className="input"/>
+
+                <label>Job Description</label>
+                <input type="text" name="jobDescription" placeholder="Job Description" className="input"/>
             </form>
         </section>
     )

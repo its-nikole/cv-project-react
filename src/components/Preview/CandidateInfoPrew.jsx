@@ -2,7 +2,7 @@ import React from "react";
 
 export function CandidateInfoPreview() {
     return (
-    <div className="preview-wrapper">
+    <div className="preview-info">
         <div className="description">
             <div>Bla bla description</div>
         </div>

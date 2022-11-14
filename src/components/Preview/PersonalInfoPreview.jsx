@@ -4,7 +4,7 @@ export function PersonalInfoPreview() {
     return (
         <section className="personal-info-prew">
             <div>
-                <h1> First and Last Name </h1>
+                <h1>First and Last Name</h1>
                 <h3>Position</h3>
             </div>
             <div>

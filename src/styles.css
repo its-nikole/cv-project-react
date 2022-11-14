@@ -3,16 +3,26 @@
     flex-direction: row;
     min-width: 700px;
     max-width: 1170px;
-    width: 900px;
+    width: 1000px;
     margin: 0 auto;
-    gap: 70px;
+    gap: 50px;
     justify-content: center;
+}
+
+.form-wrapper {
+    border: 1px solid black;
+    padding: 7px
+}
+
+.preview-wrapper {
+    border: 1px solid red;
 }
 
 form {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    padding: 50px;
 }
 
 .input {
@@ -28,8 +38,9 @@ form {
     width: 400px;
 }
 
-.preview-wrapper {
+.preview-info {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    padding: 27px;
 }
