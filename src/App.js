@@ -8,7 +8,7 @@ import { CandidateInfoPreview } from "./components/Preview/CandidateInfoPrew";
 
 export function App() {
   const [fullInfo, setFullInfo] = useState({
-    name: "Name Surname",
+    fullName: "Name Surname",
     currentJob: "Junior Front-End Engineer",
     phoneNumber: +37061770141,
     email: "name@outlook.com",
@@ -40,7 +40,7 @@ export function App() {
       <div className="wrapper">
         <div className="form-wrapper">
           <PersonalInfo 
-            nameInput={fullInfo.name}
+            nameInput={fullInfo.fullName}
             currentJobInput={fullInfo.currentJob}
             phoneInput={fullInfo.phoneNumber}
             emailInput={fullInfo.email}
@@ -68,7 +68,7 @@ export function App() {
         </div>
         <div className="preview-wrapper">
           <PersonalInfoPreview 
-            myFullName={fullInfo.name}
+            myFullName={fullInfo.fullName}
             myCurrentJob={fullInfo.currentJob}
             myPhoneNumber={fullInfo.phoneNumber}
             myEmail={fullInfo.email}

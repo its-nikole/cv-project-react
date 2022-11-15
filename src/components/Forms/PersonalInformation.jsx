@@ -20,7 +20,7 @@ export function PersonalInfo(props) {
           type="text"
           placeholder="Job Title"
           className="input"
-          name="currentJobTitle"
+          name="currentJob"
           value={props.currentJobInput}
           onChange={props.handleChange}
         />
