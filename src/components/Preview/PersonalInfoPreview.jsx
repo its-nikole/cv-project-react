@@ -1,11 +1,11 @@
 import React from "react";
 
-export function PersonalInfoPreview() {
+export function PersonalInfoPreview(props) {
     return (
         <section className="personal-info-prew">
             <div>
-                <h1>First and Last Name</h1>
-                <h3>Position</h3>
+                <h1>{props.myFullName}</h1>
+                <h3>{props.myCurrentJob}</h3>
             </div>
             <div>
                 <h3>Number</h3>
