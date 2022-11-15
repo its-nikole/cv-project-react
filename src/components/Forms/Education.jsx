@@ -10,8 +10,9 @@ export function Education(props) {
           type="text"
           placeholder="Institution Name"
           className="input"
-          name="institutionName"
+          name="institution"
           value={props.institutionInput}
+          onChange={props.handleChange}
         />
 
         <label>Degree</label>
@@ -21,6 +22,7 @@ export function Education(props) {
           className="input"
           name="degree"
           value={props.degreeInput}
+          onChange={props.handleChange}
         />
 
         <label>From</label>
@@ -28,8 +30,9 @@ export function Education(props) {
           type="date"
           placeholder="From"
           className="input"
-          name="dateFrom"
+          name="courseStart"
           value={props.courseStartInput}
+          onChange={props.handleChange}
         />
 
         <label>To</label>
@@ -37,8 +40,9 @@ export function Education(props) {
             type="date" 
             placeholder="To" 
             className="input" 
-            name="dateTo"
+            name="courseEnd"
             value={props.courseEndInput}
+            onChange={props.handleChange}
         />
       </form>
     </section>

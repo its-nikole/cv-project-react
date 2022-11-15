@@ -12,6 +12,7 @@ export function PersonalInfo(props) {
           className="input"
           name="fullName"
           value={props.nameInput}
+          onChange={props.handleChange}
         />
 
         <label>Current Job Title</label>
@@ -21,6 +22,7 @@ export function PersonalInfo(props) {
           className="input"
           name="currentJobTitle"
           value={props.currentJobInput}
+          onChange={props.handleChange}
         />
 
         <label>Phone Number</label>
@@ -30,6 +32,7 @@ export function PersonalInfo(props) {
           className="input"
           name="phoneNumber"
           value={props.phoneInput}
+          onChange={props.handleChange}
         />
 
         <label>Email</label>
@@ -39,6 +42,7 @@ export function PersonalInfo(props) {
           className="input"
           name="email"
           value={props.emailInput}
+          onChange={props.handleChange}
         />
 
         <label>City</label>
@@ -48,6 +52,7 @@ export function PersonalInfo(props) {
           className="input"
           name="cityFrom"
           value={props.cityInput}
+          onChange={props.handleChange}
         />
 
         <label>Description</label>
@@ -57,6 +62,7 @@ export function PersonalInfo(props) {
           className="input"
           name="description"
           value={props.descriptionInput}
+          onChange={props.handleChange}
         />
       </form>
     </section>

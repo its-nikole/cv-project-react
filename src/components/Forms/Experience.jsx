@@ -12,6 +12,7 @@ export function Experience(props) {
           className="input"
           name="company"
           value={props.companyInput}
+          onChange={props.handleChange}
         />
 
         <label>Location</label>
@@ -21,6 +22,7 @@ export function Experience(props) {
           className="input"
           name="location"
           value={props.companyLocationInput}
+          onChange={props.handleChange}
         />
 
         <label>Job Title</label>
@@ -30,6 +32,7 @@ export function Experience(props) {
           className="input"
           name="jobTitle"
           value={props.jobTitleInput}
+          onChange={props.handleChange}
         />
 
         <label>From</label>
@@ -37,8 +40,9 @@ export function Experience(props) {
           type="date"
           placeholder="From"
           className="input"
-          name="dateFrom"
+          name="jobStart"
           value={props.jobStartInput}
+          onChange={props.handleChange}
         />
 
         <label>To</label>
@@ -46,8 +50,9 @@ export function Experience(props) {
             type="date" 
             placeholder="To" 
             className="input" 
-            name="dateTo" 
+            name="jobEnd" 
             value={props.jobEndInput}
+            onChange={props.handleChange}
         />
 
         <label>Job Description</label>
@@ -57,6 +62,7 @@ export function Experience(props) {
           className="input"
           name="jobDescription"
           value={props.jobDescriptionInput}
+          onChange={props.handleChange}
         />
       </form>
     </section>

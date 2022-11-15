@@ -46,12 +46,15 @@ export function App() {
             emailInput={fullInfo.email}
             cityInput={fullInfo.cityFrom}
             descriptionInput={fullInfo.description}
+            handleChange={getDetails}
+            
           />
           <Education 
             institutionInput={fullInfo.institution}
             degreeInput={fullInfo.degree}
             courseStartInput={fullInfo.courseStart}
             courseEndInput={fullInfo.courseEnd}
+            handleChange={getDetails}
           />
           <Experience 
             companyInput={fullInfo.company}
@@ -60,6 +63,7 @@ export function App() {
             jobStartInput={fullInfo.jobStart}
             jobEndInput={fullInfo.jobEnd}
             jobDescriptionInput={fullInfo.jobDescription}
+            handleChange={getDetails}
           />
         </div>
         <div className="preview-wrapper">
