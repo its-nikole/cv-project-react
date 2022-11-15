@@ -20,6 +20,7 @@ export function CandidateInfoPreview(props) {
             <div>Job Title: {props.myJobTitle}</div>
             <div>From: {props.myJobStart}</div>
             <div>To: {props.myJobEnd}</div>
+            <div>Job Description: {props.myJobDescription}</div>
         </div>
     </div>
     )

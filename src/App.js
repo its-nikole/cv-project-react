@@ -53,7 +53,14 @@ export function App() {
             courseStartInput={fullInfo.courseStart}
             courseEndInput={fullInfo.courseEnd}
           />
-          <Experience />
+          <Experience 
+            companyInput={fullInfo.company}
+            companyLocationInput={fullInfo.location}
+            jobTitleInput={fullInfo.jobTitle}
+            jobStartInput={fullInfo.jobStart}
+            jobEndInput={fullInfo.jobEnd}
+            jobDescriptionInput={fullInfo.jobDescription}
+          />
         </div>
         <div className="preview-wrapper">
           <PersonalInfoPreview 
@@ -68,6 +75,12 @@ export function App() {
             myDegree={fullInfo.degree}
             myCourseStart={fullInfo.courseStart}
             myCourseEnd={fullInfo.courseEnd}
+            myCompany={fullInfo.company}
+            myCompanyLocation={fullInfo.location}
+            myJobTitle={fullInfo.jobTitle}
+            myJobStart={fullInfo.jobStart}
+            myJobEnd={fullInfo.jobEnd}
+            myJobDescription={fullInfo.jobDescription}
           />
         </div>
       </div>
