@@ -20,7 +20,7 @@ export function App() {
     courseEnd: "2020.06.01",
     company: "Orion Inovations",
     location: "London",
-    position: "Junior Front-End Engineer",
+    jobTitle: "Junior Front-End Engineer",
     jobStart: "2020.07.15",
     jobEnd: "2022.10.10",
     jobDescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quas, tenetur provident ut voluptas odio nesciunt sed et ipsam deserunt totam laborum, dolorum dolor veritatis tempore harum magni possimus nulla. Magnam placeat sit non rem fuga animi id repudiandae quidem?"
@@ -47,15 +47,28 @@ export function App() {
             cityInput={fullInfo.cityFrom}
             descriptionInput={fullInfo.description}
           />
-          <Education />
+          <Education 
+            institutionInput={fullInfo.institution}
+            degreeInput={fullInfo.degree}
+            courseStartInput={fullInfo.courseStart}
+            courseEndInput={fullInfo.courseEnd}
+          />
           <Experience />
         </div>
         <div className="preview-wrapper">
           <PersonalInfoPreview 
             myFullName={fullInfo.name}
             myCurrentJob={fullInfo.currentJob}
+            myPhoneNumber={fullInfo.phoneNumber}
+            myEmail={fullInfo.email}
           />
-          <CandidateInfoPreview />
+          <CandidateInfoPreview 
+            myDescription={fullInfo.description}
+            myInstitution={fullInfo.institution}
+            myDegree={fullInfo.degree}
+            myCourseStart={fullInfo.courseStart}
+            myCourseEnd={fullInfo.courseEnd}
+          />
         </div>
       </div>
     </>

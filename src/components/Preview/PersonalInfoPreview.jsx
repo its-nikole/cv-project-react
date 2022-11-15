@@ -8,8 +8,8 @@ export function PersonalInfoPreview(props) {
                 <h3>{props.myCurrentJob}</h3>
             </div>
             <div>
-                <h3>Number</h3>
-                <h3>Email</h3>
+                <h3>{props.myPhoneNumber}</h3>
+                <h3>{props.myEmail}</h3>
             </div>
         </section>
     )

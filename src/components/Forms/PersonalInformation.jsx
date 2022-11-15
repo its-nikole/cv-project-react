@@ -10,7 +10,7 @@ export function PersonalInfo(props) {
           type="text"
           placeholder="Full Name"
           className="input"
-          name="fulltName"
+          name="fullName"
           value={props.nameInput}
         />
 
