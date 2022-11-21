@@ -54,11 +54,9 @@ export function App() {
         <div className="preview-wrapper">
           <PersonalInfoPreview 
             fullInfo = {fullInfo}
-            handleChange={getDetails}
           />
           <CandidateInfoPreview 
             fullInfo = {fullInfo}
-            handleChange={getDetails}
           />
         </div>
       </div>
