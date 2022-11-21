@@ -39,12 +39,7 @@ export function App() {
       <div className="wrapper">
         <div className="form-wrapper">
           <PersonalInfo 
-            nameInput={fullInfo.fullName}
-            currentJobInput={fullInfo.currentJob}
-            phoneInput={fullInfo.phoneNumber}
-            emailInput={fullInfo.email}
-            cityInput={fullInfo.cityFrom}
-            descriptionInput={fullInfo.description}
+            fullInfo = {fullInfo}
             handleChange={getDetails}
             
           />
