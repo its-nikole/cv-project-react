@@ -12,21 +12,21 @@ export function CandidateInfoPreview(props) {
       <div className="education-info">
         <h3>Education</h3>
         <span className="underline"></span>
-        <div>Insituition name: {props.myInstitution}</div>
-        <div>Degree: {props.myDegree}</div>
-        <div>From: {props.myCourseStart}</div>
-        <div>To: {props.myCourseEnd}</div>
+        <div>Insituition name: {props.fullInfo.myInstitution}</div>
+        <div>Degree: {props.fullInfo.myDegree}</div>
+        <div>From: {props.fullInfo.myCourseStart}</div>
+        <div>To: {props.fullInfo.myCourseEnd}</div>
       </div>
 
       <div className="experience-info">
         <h3>Experience</h3>
         <span className="underline"></span>
-        <div>Company: {props.myCompany}</div>
-        <div>Location: {props.myCompanyLocation}</div>
-        <div>Job Title: {props.myJobTitle}</div>
-        <div>From: {props.myJobStart}</div>
-        <div>To: {props.myJobEnd}</div>
-        <div>Job Description: {props.myJobDescription}</div>
+        <div>Company: {props.fullInfo.myCompany}</div>
+        <div>Location: {props.fullInfo.myCompanyLocation}</div>
+        <div>Job Title: {props.fullInfo.myJobTitle}</div>
+        <div>From: {props.fullInfo.myJobStart}</div>
+        <div>To: {props.fullInfo.myJobEnd}</div>
+        <div>Job Description: {props.fullInfo.myJobDescription}</div>
       </div>
     </div>
   );

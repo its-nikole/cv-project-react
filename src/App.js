@@ -53,24 +53,12 @@ export function App() {
         </div>
         <div className="preview-wrapper">
           <PersonalInfoPreview 
-            myFullName={fullInfo.fullName}
-            myCurrentJob={fullInfo.currentJob}
-            myCity={fullInfo.cityFrom}
-            myPhoneNumber={fullInfo.phoneNumber}
-            myEmail={fullInfo.email}
+            fullInfo = {fullInfo}
+            handleChange={getDetails}
           />
           <CandidateInfoPreview 
-            myDescription={fullInfo.description}
-            myInstitution={fullInfo.institution}
-            myDegree={fullInfo.degree}
-            myCourseStart={fullInfo.courseStart}
-            myCourseEnd={fullInfo.courseEnd}
-            myCompany={fullInfo.company}
-            myCompanyLocation={fullInfo.location}
-            myJobTitle={fullInfo.jobTitle}
-            myJobStart={fullInfo.jobStart}
-            myJobEnd={fullInfo.jobEnd}
-            myJobDescription={fullInfo.jobDescription}
+            fullInfo = {fullInfo}
+            handleChange={getDetails}
           />
         </div>
       </div>
