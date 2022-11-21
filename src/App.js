@@ -8,11 +8,11 @@ import { CandidateInfoPreview } from "./components/Preview/CandidateInfoPrew";
 
 export function App() {
   const [fullInfo, setFullInfo] = useState({
-    fullName: "Name Surname",
-    currentJob: "Junior Front-End Engineer",
-    phoneNumber: +37061770141,
-    email: "name@outlook.com",
-    cityFrom: "Vilnius",
+    fullName: "",
+    currentJob: "",
+    phoneNumber: [],
+    email: "",
+    cityFrom: "",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quas, tenetur provident ut voluptas odio nesciunt sed et ipsam deserunt totam laborum, dolorum dolor veritatis tempore harum magni possimus nulla. Magnam placeat sit non rem fuga animi id repudiandae quidem?",
     institution: "Vilnius University",
     degree: "Bachelor's",
@@ -55,6 +55,7 @@ export function App() {
           <PersonalInfoPreview 
             myFullName={fullInfo.fullName}
             myCurrentJob={fullInfo.currentJob}
+            myCity={fullInfo.cityFrom}
             myPhoneNumber={fullInfo.phoneNumber}
             myEmail={fullInfo.email}
           />
