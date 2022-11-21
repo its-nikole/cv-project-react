@@ -41,22 +41,13 @@ export function App() {
           <PersonalInfo 
             fullInfo = {fullInfo}
             handleChange={getDetails}
-            
           />
           <Education 
-            institutionInput={fullInfo.institution}
-            degreeInput={fullInfo.degree}
-            courseStartInput={fullInfo.courseStart}
-            courseEndInput={fullInfo.courseEnd}
+            fullInfo = {fullInfo}
             handleChange={getDetails}
           />
           <Experience 
-            companyInput={fullInfo.company}
-            companyLocationInput={fullInfo.location}
-            jobTitleInput={fullInfo.jobTitle}
-            jobStartInput={fullInfo.jobStart}
-            jobEndInput={fullInfo.jobEnd}
-            jobDescriptionInput={fullInfo.jobDescription}
+            fullInfo = {fullInfo}
             handleChange={getDetails}
           />
         </div>

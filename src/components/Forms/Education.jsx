@@ -11,7 +11,7 @@ export function Education(props) {
           placeholder="Institution Name"
           className="input"
           name="institution"
-          value={props.institutionInput}
+          value={props.fullInfo.institutionInput}
           onChange={props.handleChange}
         />
 
@@ -21,7 +21,7 @@ export function Education(props) {
           placeholder="Degree"
           className="input"
           name="degree"
-          value={props.degreeInput}
+          value={props.fullInfo.degreeInput}
           onChange={props.handleChange}
         />
 
@@ -31,7 +31,7 @@ export function Education(props) {
           placeholder="From"
           className="input"
           name="courseStart"
-          value={props.courseStartInput}
+          value={props.fullInfo.courseStartInput}
           onChange={props.handleChange}
         />
 
@@ -41,7 +41,7 @@ export function Education(props) {
             placeholder="To" 
             className="input" 
             name="courseEnd"
-            value={props.courseEndInput}
+            value={props.fullInfo.courseEndInput}
             onChange={props.handleChange}
         />
       </form>
