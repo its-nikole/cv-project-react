@@ -55,6 +55,7 @@ form {
 
 .preview-wrapper {
     background-color: rgba(113, 118, 134, 0.061);
+    
 }
 
 .underline {
@@ -64,10 +65,11 @@ form {
 
 .personal-info-prew {
     background-color: rgb(117, 153, 214);
+    padding-top: 11px;
+    padding-bottom: 11px;
     color: white;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-evenly;
     
 }
@@ -77,6 +79,7 @@ form {
     flex-direction: column;
     gap: 60px;
     padding: 27px;
+    line-height: 1.8;
 }
 
 .btn-add {
