@@ -27,11 +27,10 @@ export function App() {
   })
 
   function getDetails(e) {
-    const {name, value} = e.target
-    setFullInfo(prevNames => ({
-        ...prevNames,
-        [name]: value
-    }))
+    e.preventDefault();
+    const inputName = e.target.name;
+    const inputValue = e.target.value;
+    setFullInfo({...fullInfo, [inputName]: inputValue});
   }
 
   return (
