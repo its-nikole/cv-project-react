@@ -11,7 +11,7 @@ export function Experience(props) {
           placeholder="Company"
           className="input"
           name="company"
-          value={props.fullInfo.companyInput}
+          value={props.fullInfo.company}
           onChange={props.handleChange}
         />
 
@@ -21,7 +21,7 @@ export function Experience(props) {
           placeholder="Company"
           className="input"
           name="location"
-          value={props.fullInfo.companyLocationInput}
+          value={props.fullInfo.companyLocation}
           onChange={props.handleChange}
         />
 
@@ -31,7 +31,7 @@ export function Experience(props) {
           placeholder="Job Title"
           className="input"
           name="jobTitle"
-          value={props.fullInfo.jobTitleInput}
+          value={props.fullInfo.jobTitle}
           onChange={props.handleChange}
         />
 
@@ -41,7 +41,7 @@ export function Experience(props) {
           placeholder="From"
           className="input"
           name="jobStart"
-          value={props.fullInfo.jobStartInput}
+          value={props.fullInfo.jobStart}
           onChange={props.handleChange}
         />
 
@@ -51,7 +51,7 @@ export function Experience(props) {
             placeholder="To" 
             className="input" 
             name="jobEnd" 
-            value={props.fullInfo.jobEndInput}
+            value={props.fullInfo.jobEnd}
             onChange={props.handleChange}
         />
 
@@ -61,7 +61,7 @@ export function Experience(props) {
           placeholder="Job Description"
           className="input"
           name="jobDescription"
-          value={props.fullInfo.jobDescriptionInput}
+          value={props.fullInfo.jobDescription}
           onChange={props.handleChange}
         />
         <button className="btn-add">+ Add Job</button>

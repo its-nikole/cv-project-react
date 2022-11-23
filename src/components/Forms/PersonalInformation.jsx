@@ -11,7 +11,7 @@ export function PersonalInfo(props) {
           placeholder="Full Name"
           className="input"
           name="fullName"
-          value={props.fullInfo.nameInput}
+          value={props.fullInfo.name}
           onChange={props.handleChange}
         />
 
@@ -21,7 +21,7 @@ export function PersonalInfo(props) {
           placeholder="Job Title"
           className="input"
           name="currentJob"
-          value={props.fullInfo.currentJobInput}
+          value={props.fullInfo.currentJob}
           onChange={props.handleChange}
         />
 
@@ -41,7 +41,7 @@ export function PersonalInfo(props) {
           placeholder="Email"
           className="input"
           name="email"
-          value={props.fullInfo.emailInput}
+          value={props.fullInfo.email}
           onChange={props.handleChange}
         />
 
@@ -51,7 +51,7 @@ export function PersonalInfo(props) {
           placeholder="From"
           className="input"
           name="cityFrom"
-          value={props.fullInfo.cityInput}
+          value={props.fullInfo.city}
           onChange={props.handleChange}
         />
 
@@ -61,7 +61,7 @@ export function PersonalInfo(props) {
           placeholder="Describe yourself briefly"
           className="input"
           name="description"
-          value={props.fullInfo.descriptionInput}
+          value={props.fullInfo.description}
           onChange={props.handleChange}
         />
       </form>

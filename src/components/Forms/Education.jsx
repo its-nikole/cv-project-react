@@ -11,7 +11,7 @@ export function Education(props) {
           placeholder="Institution Name"
           className="input"
           name="institution"
-          value={props.fullInfo.institutionInput}
+          value={props.fullInfo.institution}
           onChange={props.handleChange}
         />
 
@@ -21,7 +21,7 @@ export function Education(props) {
           placeholder="Degree"
           className="input"
           name="degree"
-          value={props.fullInfo.degreeInput}
+          value={props.fullInfo.degree}
           onChange={props.handleChange}
         />
 
@@ -31,7 +31,7 @@ export function Education(props) {
           placeholder="From"
           className="input"
           name="courseStart"
-          value={props.fullInfo.courseStartInput}
+          value={props.fullInfo.courseStart}
           onChange={props.handleChange}
         />
 
@@ -41,7 +41,7 @@ export function Education(props) {
             placeholder="To" 
             className="input" 
             name="courseEnd"
-            value={props.fullInfo.courseEndInput}
+            value={props.fullInfo.courseEnd}
             onChange={props.handleChange}
         />
         <button className="btn-add">+ Add Education</button>
