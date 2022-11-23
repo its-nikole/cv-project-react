@@ -80,6 +80,7 @@ form {
     gap: 60px;
     padding: 27px;
     line-height: 1.8;
+    width: 450px;
 }
 
 .btn-add {
