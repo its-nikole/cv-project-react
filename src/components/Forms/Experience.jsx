@@ -19,8 +19,13 @@ export function Experience(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    const id = generateID();
     setState(experienceInitialState);
-    props.setExperience([...props.experience, state]);
+    props.setExperience([...props.experience, {...state, id}]);
+  }
+
+  const generateID = () => {
+    return Math.floor(Math.random() * 50);
   }
 
   return (

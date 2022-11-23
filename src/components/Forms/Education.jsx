@@ -17,8 +17,13 @@ export function Education(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    const id = generateID();
     setState(educationInitialState);
-    props.setEducation([...props.education, state]);
+    props.setEducation([...props.education, {...state, id}]);
+  }
+
+  const generateID = () => {
+    return Math.floor(Math.random() * 50);
   }
 
   return (
