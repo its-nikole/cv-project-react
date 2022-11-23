@@ -9,6 +9,11 @@ export function CandidateInfoPreview(props) {
     props.setExperience(props.experience.filter((item) => item.id !== e.id));
   };
 
+  const handleEducationEdit = (e) => {
+    const editableItem = props.education.find((item) => item.id === e.id);
+    props.setEditEducation(editableItem);
+  }
+
   return (
     <div className="preview-info">
       <div className="description">
@@ -27,6 +32,7 @@ export function CandidateInfoPreview(props) {
             <div>From: {educationItem.courseStart}</div>
             <div>To: {educationItem.courseEnd}</div>
             <button onClick={() => handleEducationDelete(educationItem)} className="btn-delete">Delete</button>
+            <button onClick={() => handleEducationEdit(educationItem)} className="btn-edit">Edit</button>          
           </div>
         ))}
       </div>
@@ -43,6 +49,7 @@ export function CandidateInfoPreview(props) {
             <div>To: {experienceItem.jobEnd}</div>
             <div>Job Description: {experienceItem.jobDescription}</div>
             <button onClick={() => handleExperienceDelete(experienceItem)}className="btn-delete">Delete</button>
+            <button className="btn-edit">Edit</button>
           </div>
         ))}
       </div>

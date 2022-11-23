@@ -9,6 +9,9 @@ import { CandidateInfoPreview } from "./components/Preview/CandidateInfoPrew";
 export function App() {
   const [education, setEducation] = useState([]);
   const [experience, setExperience] = useState([]);
+
+  const [editEducation, setEditEducation] = useState(null);
+
   const [generalInfo, setGeneralInfo] = useState({
     fullName: "",
     currentJob: "",
@@ -31,7 +34,12 @@ export function App() {
       <div className="wrapper">
         <div className="form-wrapper">
           <GeneralInfo generalInfo={generalInfo} handleChange={getDetails} />
-          <Education setEducation={setEducation} education={education} />
+          <Education
+            setEducation={setEducation}
+            education={education}
+            setEditEducation={setEditEducation}
+            editEducation={editEducation}
+          />
           <Experience setExperience={setExperience} experience={experience} />
         </div>
         <div className="preview-wrapper">
