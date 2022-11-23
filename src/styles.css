@@ -83,6 +83,10 @@ form {
     width: 450px;
 }
 
+.item {
+    padding-bottom: 30px;
+}
+
 .btn-add {
     font-weight: bold;
     background: rgba(0, 46, 173, 0.741);

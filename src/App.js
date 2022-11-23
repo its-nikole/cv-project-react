@@ -1,38 +1,28 @@
 import React, { useState } from "react";
 import { Header } from "./components/Header";
-import { PersonalInfo } from "./components/Forms/PersonalInformation";
+import { GeneralInfo } from "./components/Forms/GeneralInformation";
 import { Education } from "./components/Forms/Education";
 import { Experience } from "./components/Forms/Experience";
-import { PersonalInfoPreview } from "./components/Preview/PersonalInfoPreview";
+import { GeneralInfoPreview } from "./components/Preview/GeneralInfoPrew";
 import { CandidateInfoPreview } from "./components/Preview/CandidateInfoPrew";
 
 export function App() {
   const [education, setEducation] = useState([]);
   const [experience, setExperience] = useState([]);
-  const [fullInfo, setFullInfo] = useState({
+  const [generalInfo, setGeneralInfo] = useState({
     fullName: "",
     currentJob: "",
     phoneNumber: [],
     email: "",
     cityFrom: "",
     description: "",
-    institution: "",
-    degree: "",
-    courseStart: "",
-    courseEnd: "",
-    company: "",
-    location: "",
-    jobTitle: "",
-    jobStart: "",
-    jobEnd: "",
-    jobDescription: ""
-  })
+  });
 
   function getDetails(e) {
     e.preventDefault();
     const inputName = e.target.name;
     const inputValue = e.target.value;
-    setFullInfo({...fullInfo, [inputName]: inputValue});
+    setGeneralInfo({ ...generalInfo, [inputName]: inputValue });
   }
 
   return (
@@ -40,28 +30,25 @@ export function App() {
       <Header />
       <div className="wrapper">
         <div className="form-wrapper">
-          <PersonalInfo 
-            fullInfo = {fullInfo}
-            handleChange={getDetails}
-          />
-          <Education 
-            fullInfo = {fullInfo}
-            handleChange={getDetails}
-          />
-          <Experience 
-            fullInfo = {fullInfo}
-            handleChange={getDetails}
-          />
+          <GeneralInfo generalInfo={generalInfo} handleChange={getDetails} />
+          <Education setEducation={setEducation} education={education} />
+          <Experience setExperience={setExperience} experience={experience} />
         </div>
         <div className="preview-wrapper">
-          <PersonalInfoPreview 
-            fullInfo = {fullInfo}
+          <GeneralInfoPreview
+            generalInfo={generalInfo}
+            handleChange={getDetails}
           />
-          <CandidateInfoPreview 
-            fullInfo = {fullInfo}
+          <CandidateInfoPreview
+            generalInfo={generalInfo}
+            handleChange={getDetails}
+            setEducation={setEducation}
+            education={education}
+            setExperience={setExperience}
+            experience={experience}
           />
         </div>
       </div>
     </>
-  )
+  );
 }

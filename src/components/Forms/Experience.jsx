@@ -1,18 +1,40 @@
-import React from "react";
+import React, {useState} from "react";
 
 export function Experience(props) {
+  const experienceInitialState = {
+    company: "",
+    location: "",
+    jobTitle: "",
+    jobStart: "",
+    jobEnd: "",
+    jobDescription: ""
+  }
+  const [state, setState] = useState(experienceInitialState);
+
+  function handleChange(e) {
+    const inputName = e.target.name;
+    const inputValue = e.target.value;
+    setState({...state, [inputName]: inputValue});
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setState(experienceInitialState);
+    props.setExperience([...props.experience, state]);
+  }
+
   return (
     <section className="experience">
       <h2>Experience</h2>
-      <form className="experience-form">
+      <form onSubmit={handleSubmit} className="experience-form">
         <label>Company</label>
         <input
           type="text"
           placeholder="Company"
           className="input"
           name="company"
-          value={props.fullInfo.company}
-          onChange={props.handleChange}
+          value={state.company}
+          onChange={handleChange}
         />
 
         <label>Location</label>
@@ -21,8 +43,8 @@ export function Experience(props) {
           placeholder="Company"
           className="input"
           name="location"
-          value={props.fullInfo.companyLocation}
-          onChange={props.handleChange}
+          value={state.location}
+          onChange={handleChange}
         />
 
         <label>Job Title</label>
@@ -31,8 +53,8 @@ export function Experience(props) {
           placeholder="Job Title"
           className="input"
           name="jobTitle"
-          value={props.fullInfo.jobTitle}
-          onChange={props.handleChange}
+          value={state.jobTitle}
+          onChange={handleChange}
         />
 
         <label>From</label>
@@ -41,8 +63,8 @@ export function Experience(props) {
           placeholder="From"
           className="input"
           name="jobStart"
-          value={props.fullInfo.jobStart}
-          onChange={props.handleChange}
+          value={state.jobStart}
+          onChange={handleChange}
         />
 
         <label>To</label>
@@ -51,8 +73,8 @@ export function Experience(props) {
             placeholder="To" 
             className="input" 
             name="jobEnd" 
-            value={props.fullInfo.jobEnd}
-            onChange={props.handleChange}
+            value={state.jobEnd}
+            onChange={handleChange}
         />
 
         <label>Job Description</label>
@@ -61,10 +83,10 @@ export function Experience(props) {
           placeholder="Job Description"
           className="input"
           name="jobDescription"
-          value={props.fullInfo.jobDescription}
-          onChange={props.handleChange}
+          value={state.jobDescription}
+          onChange={handleChange}
         />
-        <button className="btn-add">+ Add Job</button>
+        <button type="submit" className="btn-add">+ Add Job</button>
       </form>
     </section>
   );

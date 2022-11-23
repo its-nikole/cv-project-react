@@ -1,6 +1,6 @@
 import React from "react";
 
-export function PersonalInfo(props) {
+export function GeneralInfo(props) {
   return (
     <section className="personal-info">
       <h2>Personal Information</h2>
@@ -11,7 +11,7 @@ export function PersonalInfo(props) {
           placeholder="Full Name"
           className="input"
           name="fullName"
-          value={props.fullInfo.name}
+          value={props.generalInfo.name}
           onChange={props.handleChange}
         />
 
@@ -21,7 +21,7 @@ export function PersonalInfo(props) {
           placeholder="Job Title"
           className="input"
           name="currentJob"
-          value={props.fullInfo.currentJob}
+          value={props.generalInfo.currentJob}
           onChange={props.handleChange}
         />
 
@@ -31,7 +31,7 @@ export function PersonalInfo(props) {
           placeholder="Phone Number"
           className="input"
           name="phoneNumber"
-          value={props.fullInfo.phoneNumber}
+          value={props.generalInfo.phoneNumber}
           onChange={props.handleChange}
         />
 
@@ -41,7 +41,7 @@ export function PersonalInfo(props) {
           placeholder="Email"
           className="input"
           name="email"
-          value={props.fullInfo.email}
+          value={props.generalInfo.email}
           onChange={props.handleChange}
         />
 
@@ -51,7 +51,7 @@ export function PersonalInfo(props) {
           placeholder="From"
           className="input"
           name="cityFrom"
-          value={props.fullInfo.city}
+          value={props.generalInfo.city}
           onChange={props.handleChange}
         />
 
@@ -61,7 +61,7 @@ export function PersonalInfo(props) {
           placeholder="Describe yourself briefly"
           className="input"
           name="description"
-          value={props.fullInfo.description}
+          value={props.generalInfo.description}
           onChange={props.handleChange}
         />
       </form>

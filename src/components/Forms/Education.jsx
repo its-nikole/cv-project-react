@@ -1,18 +1,38 @@
-import React from "react";
+import React, {useState} from "react";
 
 export function Education(props) {
+  const educationInitialState = {
+    institution: "",
+    degree: "",
+    courseStart: "",
+    courseEnd: "",
+  }
+  const [state, setState] = useState(educationInitialState);
+
+  function handleChange(e) {
+    const inputName = e.target.name;
+    const inputValue = e.target.value;
+    setState({...state, [inputName]: inputValue});
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setState(educationInitialState);
+    props.setEducation([...props.education, state]);
+  }
+
   return (
     <section className="education">
       <h2>Education</h2>
-      <form className="education-form">
+      <form onSubmit={handleSubmit} className="education-form">
         <label>Institution Name</label>
         <input
           type="text"
           placeholder="Institution Name"
           className="input"
           name="institution"
-          value={props.fullInfo.institution}
-          onChange={props.handleChange}
+          value={state.institution}
+          onChange={handleChange}
         />
 
         <label>Degree</label>
@@ -21,8 +41,8 @@ export function Education(props) {
           placeholder="Degree"
           className="input"
           name="degree"
-          value={props.fullInfo.degree}
-          onChange={props.handleChange}
+          value={state.degree}
+          onChange={handleChange}
         />
 
         <label>From</label>
@@ -31,8 +51,8 @@ export function Education(props) {
           placeholder="From"
           className="input"
           name="courseStart"
-          value={props.fullInfo.courseStart}
-          onChange={props.handleChange}
+          value={state.courseStart}
+          onChange={handleChange}
         />
 
         <label>To</label>
@@ -41,10 +61,10 @@ export function Education(props) {
             placeholder="To" 
             className="input" 
             name="courseEnd"
-            value={props.fullInfo.courseEnd}
-            onChange={props.handleChange}
+            value={state.courseEnd}
+            onChange={handleChange}
         />
-        <button className="btn-add">+ Add Education</button>
+        <button type="submit" className="btn-add">+ Add Education</button>
       </form>
     </section>
   );
