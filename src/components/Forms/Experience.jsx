@@ -64,7 +64,7 @@ export function Experience(props) {
           value={props.fullInfo.jobDescriptionInput}
           onChange={props.handleChange}
         />
-        <button className="btn-add">Add</button>
+        <button className="btn-add">+ Add Job</button>
       </form>
     </section>
   );

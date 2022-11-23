@@ -44,7 +44,7 @@ export function Education(props) {
             value={props.fullInfo.courseEndInput}
             onChange={props.handleChange}
         />
-        <button className="btn-add">Add</button>
+        <button className="btn-add">+ Add Education</button>
       </form>
     </section>
   );

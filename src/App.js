@@ -7,6 +7,8 @@ import { PersonalInfoPreview } from "./components/Preview/PersonalInfoPreview";
 import { CandidateInfoPreview } from "./components/Preview/CandidateInfoPrew";
 
 export function App() {
+  const [education, setEducation] = useState([]);
+  const [experience, setExperience] = useState([]);
   const [fullInfo, setFullInfo] = useState({
     fullName: "",
     currentJob: "",
