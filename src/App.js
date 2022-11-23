@@ -37,8 +37,6 @@ export function App() {
           <Education
             setEducation={setEducation}
             education={education}
-            setEditEducation={setEditEducation}
-            editEducation={editEducation}
           />
           <Experience setExperience={setExperience} experience={experience} />
         </div>
@@ -52,6 +50,8 @@ export function App() {
             handleChange={getDetails}
             setEducation={setEducation}
             education={education}
+            setEditEducation={setEditEducation}
+            editEducation={editEducation}
             setExperience={setExperience}
             experience={experience}
           />

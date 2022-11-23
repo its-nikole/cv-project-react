@@ -11,7 +11,7 @@ export function CandidateInfoPreview(props) {
 
   const handleEducationEdit = (e) => {
     const editableItem = props.education.find((item) => item.id === e.id);
-    props.setEditEducation(editableItem);
+    props.setEditEducation(editableItem.id);
   }
 
   return (
