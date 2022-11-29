@@ -11,6 +11,7 @@ export function App() {
   const [experience, setExperience] = useState([]);
 
   const [editEducation, setEditEducation] = useState(null);
+  const [editExperience, setEditExperience] = useState(null);
 
   const [generalInfo, setGeneralInfo] = useState({
     fullName: "",
@@ -37,6 +38,8 @@ export function App() {
           <Education
             setEducation={setEducation}
             education={education}
+            setEditEducation={setEditEducation}
+            editEducation={editEducation}
           />
           <Experience setExperience={setExperience} experience={experience} />
         </div>

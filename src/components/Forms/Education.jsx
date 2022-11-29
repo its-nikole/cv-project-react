@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 export function Education(props) {
   const educationInitialState = {
@@ -9,6 +9,16 @@ export function Education(props) {
   }
   const [state, setState] = useState(educationInitialState);
 
+  useEffect(() => {
+    const editingData = props.education.find(
+      (item) => item.id === props.editEducation
+    );
+    if (!editingData) {
+      return;
+    }
+    setState(editingData);
+  }, [props.editEducation, props.education]);
+
   function handleChange(e) {
     const inputName = e.target.name;
     const inputValue = e.target.value;
@@ -17,9 +27,16 @@ export function Education(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const id = generateID();
-    setState(educationInitialState);
-    props.setEducation([...props.education, {...state, id}]);
+
+    if (props.editEducation) {
+      props.setEducation([state]);
+      props.setEditEducation(null);
+      setState(editEducation);
+    } else {
+      const id = generateID();
+      setState(educationInitialState);
+      props.setEducation([...props.education, {...state, id}]);
+    };
   }
 
   const generateID = () => {
